@@ -1,0 +1,34 @@
+{
+  "name": "nozaki-components",
+  "version": "0.0.0",
+  "description": "modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RIAEvangelist/nozaki-components.git"
+  },
+  "keywords": [
+    "javascript",
+    "browser",
+    "modern",
+    "webcomponents",
+    "es6",
+    "es7",
+    "esmodules",
+    "esm",
+    "webcomponent",
+    "esmodule"
+  ],
+  "author": "Brandon Nozaki Miller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RIAEvangelist/nozaki-components/issues"
+  },
+  "homepage": "https://github.com/RIAEvangelist/nozaki-components#readme"
+}
