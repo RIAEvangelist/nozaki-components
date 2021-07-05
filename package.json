@@ -30,5 +30,12 @@
   "bugs": {
     "url": "https://github.com/RIAEvangelist/nozaki-components/issues"
   },
-  "homepage": "https://github.com/RIAEvangelist/nozaki-components#readme"
+  "homepage": "https://github.com/RIAEvangelist/nozaki-components#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "vanilla-test": "^1.4.9"
+  },
+  "dependencies": {
+    "strong-type": "^1.1.0"
+  }
 }
