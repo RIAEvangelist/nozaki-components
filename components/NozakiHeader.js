@@ -38,22 +38,6 @@ class NozakiHeader extends HTMLElement {
 
         return this;
     }
-
-    async connectedCallback(){
-        
-        return this;
-    }
-
-    async disconnectedCallback(){
-
-        return this;
-    }
-
-    async attributeChangedCallback(name, oldVal, newVal){
-
-        return this;
-    }
-
 }
 
 customElements.define('nozaki-header', NozakiHeader);

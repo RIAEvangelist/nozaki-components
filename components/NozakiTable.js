@@ -24,28 +24,6 @@ class NozakiTable extends HTMLElement {
 
         return this;
     }
-
-    static get observedAttributes() {
-        return [
-            
-        ];
-    }
-
-    async connectedCallback(){
-        
-        return this;
-    }
-
-    async disconnectedCallback(){
-
-        return this;
-    }
-
-    async attributeChangedCallback(name, oldVal, newVal){
-
-        return this;
-    }
-
 }
 
 customElements.define('nozaki-table', NozakiTable);
