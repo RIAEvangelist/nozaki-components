@@ -1,7 +1,17 @@
+import nozakiGlobal from '../modules/NozakiGlobal.js';
 
-const style=`<style>
-    
-</style>`;
+const style=`<link rel="stylesheet" href="${nozakiGlobal.root}css/w3.css">
+    <style>
+        
+    </style>
+`;
+
+function getTemplate(self){
+    return `
+    ${style}
+    ${self.dataset.someDataAttr}
+`;
+}
 
 class NozakiX extends HTMLElement {
     constructor() {
@@ -10,9 +20,15 @@ class NozakiX extends HTMLElement {
         //this.shadowRoot
         this.attachShadow({mode: 'open'});
         
-        this.shadowRoot.innerHTML=`${style}`;
+        this.shadowRoot.innerHTML=getTemplate(this);
 
         return this;
+    }
+
+    static get observedAttributes() {
+        return [
+            
+        ];
     }
 
     async connectedCallback(){
