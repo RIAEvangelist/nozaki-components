@@ -2,35 +2,30 @@ import nozakiGlobal from '../modules/NozakiGlobal.js';
 import './NozakiInput.js';
 import './NozakiTable.js';
 
-const style=`<link rel="stylesheet" href="${nozakiGlobal.root}css/w3.css">
-    <style>
-        
-    </style>
-`;
+const style=`<link rel="stylesheet" href="../css/w3.css">`;
 
 function getTemplate(self){
     return `
-    ${style}
-    <style>
-        ${self.dataset.style}
-    </style>
-    <div class='w3-container w3-padding ${self.dataset.class}'>
-        <h2><slot name='title'>Filter Table</slot></h2>
-        <p><slot name='subtitle'>Search for an entry in the input field.</p>
+        ${style}
+        <div class='w3-container w3-padding ${self.dataset.class||''}'
+            style='${self.dataset.style||''}'
+        >
+            <h2><slot name='title'>Filter Table</slot></h2>
+            <p><slot name='subtitle'>Search for an entry in the input field.</p>
 
-        <nozaki-input
-            data-class='w3-padding ${self.dataset.inputclass}'
-            data-style='${self.dataset.inputstyle}'
-            data-placeholder='${self.dataset.inputplaceholder}'
-        ></nozaki-input>
+            <nozaki-input
+                data-class='${self.dataset.inputclass||''}'
+                data-style='${self.dataset.inputstyle||''} width:calc(100% - 16px);'
+                data-placeholder='${self.dataset.inputplaceholder||''}'
+            ></nozaki-input>
 
-        <nozaki-table
-            data-class='w3-padding ${self.dataset.tableclass}'
-            data-style='${self.dataset.tablestyle}'
-        >${self.querySelector('table').outerHTML}</nozakiTable>
-    </div>
+            <nozaki-table
+                data-class='w3-padding ${self.dataset.tableclass||''}'
+                data-style='${self.dataset.tablestyle||''}'
+            >${self.querySelector('table').outerHTML}</nozakiTable>
+        </div>
 
-`;
+    `;
 }
 
 class NozakiTableFilter extends HTMLElement {

@@ -1,17 +1,16 @@
 import nozakiGlobal from '../modules/NozakiGlobal.js';
 
-const style=`<link rel="stylesheet" href="${nozakiGlobal.root}css/w3.css">`;
+const style=`<link rel="stylesheet" href="../css/w3.css">`;
 
 function getTemplate(self){
     return `
-    ${style}
-    <style>
-        ${self.dataset.style}
-    </style>
-    <table class='w3-table-all w3-margin-top ${self.dataset.class}'>
-        ${self.shadowRoot.host.querySelector('table').innerHTML}        
-    </table>
-`;
+        ${style}
+        <table class='w3-table-all w3-margin-top ${self.dataset.class}'
+            style='${self.dataset.style||''}'
+        >
+            ${self.shadowRoot.host.querySelector('table').innerHTML}        
+        </table>
+    `;
 }
 
 class NozakiTable extends HTMLElement {

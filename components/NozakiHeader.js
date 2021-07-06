@@ -1,7 +1,7 @@
 import nozakiGlobal from '../modules/NozakiGlobal.js';
 
 const style=`
-    <link rel="stylesheet" href="${nozakiGlobal.root}css/w3.css">
+    <link rel="stylesheet" href="../css/w3.css">
     <style>
         img{
             height:5em;
@@ -12,10 +12,9 @@ const style=`
 function getTemplate(self){
     return `
         ${style}
-        <style>
-            ${self.dataset.style}
-        </style>
-        <header class='w3-container w3-${self.dataset.color} w3-cell-row ${self.dataset.class}'>
+        <header class='w3-container w3-${self.dataset.color||'gray'} w3-cell-row ${self.dataset.class}'
+            style='${self.dataset.style||''}'
+        >
             <div class='w3-container w3-cell'>
                 <img class='w3-round' src='${self.dataset.img}' />
             </div>
