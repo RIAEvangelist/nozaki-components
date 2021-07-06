@@ -1,5 +1,3 @@
-import nozakiGlobal from '../modules/NozakiGlobal.js';
-
 const style=`<link rel="stylesheet" href="../css/w3.css">`;
 
 function getTemplate(self){

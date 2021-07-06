@@ -1,4 +1,3 @@
-import nozakiGlobal from '../modules/NozakiGlobal.js';
 import './NozakiInput.js';
 import './NozakiTable.js';
 

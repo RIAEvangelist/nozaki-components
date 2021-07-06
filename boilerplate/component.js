@@ -1,6 +1,4 @@
-import nozakiGlobal from '../modules/NozakiGlobal.js';
-
-const style=`<link rel="stylesheet" href="${nozakiGlobal.root}css/w3.css">
+const style=`<link rel="stylesheet" href="../css/w3.css">
     <style>
         
     </style>
@@ -8,12 +6,12 @@ const style=`<link rel="stylesheet" href="${nozakiGlobal.root}css/w3.css">
 
 function getTemplate(self){
     return `
-    ${style}
-    <style>
-        ${self.dataset.style}
-    </style>
-    ${self.dataset.someDataAttr}
-`;
+        ${style}
+        
+        ${self.dataset.class||''}
+        ${self.dataset.style||''}
+        
+    `;
 }
 
 class NozakiX extends HTMLElement {
