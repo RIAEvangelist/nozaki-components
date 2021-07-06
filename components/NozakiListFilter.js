@@ -1,5 +1,5 @@
 import './NozakiInput.js';
-import './NozakiTable.js';
+import './NozakiList.js';
 
 const style=`<link rel="stylesheet" href="../css/w3.css">`;
 
@@ -9,7 +9,7 @@ function getTemplate(self){
         <div class='w3-container w3-padding ${self.dataset.class||''}'
             style='${self.dataset.style||''}'
         >
-            <h2><slot name='title'>Filter Table</slot></h2>
+            <h2><slot name='title'>Filter List</slot></h2>
             <p><slot name='subtitle'>Search for an entry in the input field.</p>
 
             <nozaki-input
@@ -18,10 +18,10 @@ function getTemplate(self){
                 data-placeholder='${self.dataset.inputplaceholder||''}'
             ></nozaki-input>
 
-            <nozaki-table
-                data-class='w3-padding ${self.dataset.tableclass||''}'
-                data-style='${self.dataset.tablestyle||''}'
-            >${self.querySelector('table').outerHTML}</nozakiTable>
+            <nozaki-list
+                data-class='w3-padding ${self.dataset.listclass||''}'
+                data-style='${self.dataset.liststyle||''}'
+            >${self.innerHTML}</nozakiTable>
         </div>
 
     `;
@@ -47,20 +47,15 @@ class NozakiTableFilter extends HTMLElement {
             .value
             .toUpperCase();
 
-        const tr = this.shadowRoot.querySelector('nozaki-table')
-            .shadowRoot.querySelectorAll('table tr');
+        const li = this.shadowRoot.querySelector('nozaki-list')
+            .shadowRoot.querySelectorAll('ul>li');
         
         for (let i = 0; i < tr.length; i++) {
-            const td = tr[i].querySelectorAll("td");
-            for(let j=0; j<td.length; j++){
-                if (td[j]) {
-                    const txtValue = td[j].innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = '';
-                    } else {
-                        tr[i].style.display = 'none';
-                    }
-                }
+            const txtValue = li[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = '';
+            } else {
+                li[i].style.display = 'none';
             }
         }
     }
