@@ -14,12 +14,12 @@ const basic=function(key,value){
 
 //basic test template
 
-// try{
-//     basic('',);    
-// }catch(err){
-//     fail(err);
-// }
-// cleanup();
+try{
+    console.log('will probably write tests with puppeteer');    
+}catch(err){
+    fail(err);
+}
+cleanup();
 
 //hand writtenbasic test template
 //used to log out human readable test
