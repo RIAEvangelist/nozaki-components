@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.",
   "main": "index.js",
+  "type":"module",
   "directories": {
     "test": "test"
   },
