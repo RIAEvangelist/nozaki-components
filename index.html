@@ -13,8 +13,7 @@
             
             //import components used in the page
             import '/components/NozakiHeader.js';
-            import '/components/NozakiTable.js';
-            import '/components/NozakiInput.js';
+            import '/components/NozakiTableFilter.js';
         </script>
         <style>
             html,body{
@@ -34,53 +33,65 @@
             data-style=''
         ></nozaki-header>
 
-        <nozaki-input
-            data-placeholder='default'
-        ></nozaki-input>
+
         
-        <nozaki-table 
+        <nozaki-table-filter
             data-class=''
+            data-inputclass=''
+            data-tableclass=''
+
             data-style=''
+            data-inputstyle=''
+            data-tablestyle=''
+
+            data-inputplaceholder='search...'
         >
+            <span slot=title>Nozaki Components</span>
+            <span slot=subtitle>Filter the components with the input field.</span>
+            
             <table>
-                <tr>
-                    <th style="width:60%;">Name</th>
-                    <th style="width:40%;">Country</th>
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Berglunds snabbkop</td>
-                    <td>Sweden</td>
-                </tr>
-                <tr>
-                    <td>Island Trading</td>
-                    <td>UK</td>
-                </tr>
-                <tr>
-                    <td>Koniglich Essen</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Laughing Bacchus Winecellars</td>
-                    <td>Canada</td>
-                </tr>
-                <tr>
-                    <td>Magazzini Alimentari Riuniti</td>
-                    <td>Italy</td>
-                </tr>
-                <tr>
-                    <td>North/South</td>
-                    <td>UK</td>
-                </tr>
-                <tr>
-                    <td>Paris specialites</td>
-                    <td>France</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th style="width:30%;">Component Name</th>
+                        <th style="width:70%;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href='/example/nozaki-header.html'>nozaki-header</a>
+                        </td>
+                        <td>A page or section header with an icon/logo/image</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href='/example/nozaki-input.html'>nozaki-input</a>
+                        </td>
+                        <td>A text input box</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href='/example/nozaki-table.html'>nozaki-table</a>
+                        </td>
+                        <td>A handsome table</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href='/example/nozaki-table-filter'>nozaki-table-filter</a>
+                        </td>
+                        <td>A table with a title and subtitle. It also has an input box with which you can search/filter the table contents.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href='/example/'></a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
             </table>
-        </nozaki-table>
+
+        </nozaki-table-filter>
     
     </body>
 </html>

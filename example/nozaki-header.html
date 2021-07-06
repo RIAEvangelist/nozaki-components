@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Nozaki Components Examples</title>
+        <script type='module'>
+            //set root path for nozaki-components
+            import nozakiGlobal from '../modules/NozakiGlobal.js';
+            nozakiGlobal.root='/';
+            
+            //import components used in the page
+            import '/components/NozakiHeader.js';
+        </script>
+        <style>
+            html,body{
+                padding:0;
+                margin:0;
+            }
+        </style>
+    </head>
+
+    <body>
+    
+        <nozaki-header
+            data-img='./img/NMLogo.jpg'
+            data-text='Nozaki Components'
+            data-color='gray'
+            data-class=''
+            data-style=''
+        ></nozaki-header>
+    
+    </body>
+</html>
