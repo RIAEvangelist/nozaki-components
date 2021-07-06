@@ -14,6 +14,7 @@
             //import components used in the page
             import '/components/NozakiHeader.js';
             import '/components/NozakiTable.js';
+            import '/components/NozakiInput.js';
         </script>
         <style>
             html,body{
@@ -29,9 +30,18 @@
             data-img='./img/NMLogo.jpg'
             data-text='Nozaki Components'
             data-color='gray'
+            data-class=''
+            data-style=''
         ></nozaki-header>
 
-        <nozaki-table>
+        <nozaki-input
+            data-placeholder='default'
+        ></nozaki-input>
+        
+        <nozaki-table 
+            data-class=''
+            data-style=''
+        >
             <table>
                 <tr>
                     <th style="width:60%;">Name</th>

@@ -8,13 +8,14 @@ function getTemplate(self){
     <style>
         ${self.dataset.style}
     </style>
-    <table class='w3-table-all w3-margin-top ${self.dataset.class}'>
-        ${self.shadowRoot.host.querySelector('table').innerHTML}        
-    </table>
+    <input class='w3-input ${self.dataset.class}' 
+        type='text'
+        placeholder='${self.dataset.placeholder}'
+    />
 `;
 }
 
-class NozakiTable extends HTMLElement {
+class NozakiInput extends HTMLElement {
     constructor() {
         super();
         
@@ -49,4 +50,4 @@ class NozakiTable extends HTMLElement {
 
 }
 
-customElements.define('nozaki-table', NozakiTable);
+customElements.define('nozaki-input', NozakiInput);

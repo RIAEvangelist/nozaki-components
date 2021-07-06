@@ -9,6 +9,9 @@ const style=`<link rel="stylesheet" href="${nozakiGlobal.root}css/w3.css">
 function getTemplate(self){
     return `
     ${style}
+    <style>
+        ${self.dataset.style}
+    </style>
     ${self.dataset.someDataAttr}
 `;
 }
