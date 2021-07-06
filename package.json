@@ -1,6 +1,6 @@
 {
   "name": "nozaki-components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.",
   "main": "index.js",
   "directories": {
