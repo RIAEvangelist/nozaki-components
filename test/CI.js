@@ -1,14 +1,14 @@
 import VanillaTest from 'vanilla-test';
 const test=new VanillaTest;
 
+const cleanup=function(){
+    test.pass();
+    test.done();
+}
+
 const fail=function(err){
     console.trace(err)
     test.fail();
-}
-
-const basic=function(key,value){
-    test.expects(`is.${key}(${value});`);
-    is[key](value);
 }
 
 
