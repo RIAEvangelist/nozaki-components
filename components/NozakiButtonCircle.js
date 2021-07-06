@@ -1,3 +1,5 @@
+import NozakiButton from './NozakiButton.js'
+
 const style=`<link rel="stylesheet" href="../css/w3.css">`;
 
 function getTemplate(self){
@@ -12,22 +14,19 @@ function getTemplate(self){
     `;
 }
 
-class NozakiButton extends HTMLElement {
+class NozakiButtonCircle extends NozakiButton {
     constructor() {
         super();
         
-        //this.shadowRoot
-        this.attachShadow({mode: 'open'});
-        
-        this.shadowRoot.innerHTML=getTemplate(this);
+        this.shadowRoot.querySelector('button').classList.add('w3-circle','w3-xlarge');
 
         return this;
     }
 }
 
-customElements.define('nozaki-button', NozakiButton);
+customElements.define('nozaki-button-circle', NozakiButtonCircle);
 
 export {
-    NozakiButton as default,
-    NozakiButton
+    NozakiButtonCircle as default,
+    NozakiButtonCircle
 }

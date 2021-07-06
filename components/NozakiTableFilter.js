@@ -67,3 +67,8 @@ class NozakiTableFilter extends HTMLElement {
 }
 
 customElements.define('nozaki-table-filter', NozakiTableFilter);
+
+export {
+    NozakiTableFilter as default,
+    NozakiTableFilter
+}

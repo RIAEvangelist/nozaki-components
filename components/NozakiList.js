@@ -25,3 +25,8 @@ class NozakiList extends HTMLElement {
 }
 
 customElements.define('nozaki-list', NozakiList);
+
+export {
+    NozakiList as default,
+    NozakiList
+}

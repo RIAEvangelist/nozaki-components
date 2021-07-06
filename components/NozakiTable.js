@@ -25,3 +25,8 @@ class NozakiTable extends HTMLElement {
 }
 
 customElements.define('nozaki-table', NozakiTable);
+
+export {
+    NozakiTable as default,
+    NozakiTable
+}

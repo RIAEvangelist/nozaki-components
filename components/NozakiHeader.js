@@ -39,3 +39,8 @@ class NozakiHeader extends HTMLElement {
 }
 
 customElements.define('nozaki-header', NozakiHeader);
+
+export {
+    NozakiHeader as default,
+    NozakiHeader
+}

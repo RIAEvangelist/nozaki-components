@@ -28,3 +28,8 @@ class NozakiInput extends HTMLElement {
 }
 
 customElements.define('nozaki-input', NozakiInput);
+
+export {
+    NozakiInput as default,
+    NozakiInput
+}

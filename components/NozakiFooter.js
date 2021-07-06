@@ -35,3 +35,8 @@ class NozakiFooter extends HTMLElement {
 }
 
 customElements.define('nozaki-footer', NozakiFooter);
+
+export {
+    NozakiFooter as default,
+    NozakiFooter
+}
