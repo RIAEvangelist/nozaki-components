@@ -4,12 +4,12 @@ function getTemplate(self){
     return `
         ${style}
         <style>
-            ${self.dataset.style}
+            ${self.dataset.style||''}
         </style>
-        <input class='w3-input ${self.dataset.class}' 
+        <input class='w3-input ${self.dataset.class||''}' 
             type='text'
-            placeholder='${self.dataset.placeholder}'
-            style='${self.dataset.style||''}'
+            placeholder='${self.dataset.placeholder||''}'
+            style='width: 20em; ${self.dataset.style||''}'
         />
     `;
 }
