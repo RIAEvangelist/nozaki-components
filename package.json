@@ -7,9 +7,6 @@
   "directories": {
     "test": "test"
   },
-  "bin": {  
-    "nozaki": "./bin/nozaki.js"  
-  },
   "scripts": {
     "test": "npm i && node ./test/CI.js",
     "start": "node index.js"
