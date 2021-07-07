@@ -52,6 +52,6 @@ class NozakiX extends HTMLElement {
 customElements.define('nozaki-yyy', NozakiX);
 
 export {
-    NozakiButtonX as default,
-    NozakiButtonX
+    NozakiX as default,
+    NozakiX
 }

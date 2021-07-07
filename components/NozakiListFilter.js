@@ -27,7 +27,7 @@ function getTemplate(self){
     `;
 }
 
-class NozakiTableFilter extends HTMLElement {
+class NozakiListFilter extends HTMLElement {
     constructor() {
         super();
         
@@ -50,7 +50,7 @@ class NozakiTableFilter extends HTMLElement {
         const li = this.shadowRoot.querySelector('nozaki-list')
             .shadowRoot.querySelectorAll('ul>li');
         
-        for (let i = 0; i < tr.length; i++) {
+        for (let i = 0; i < li.length; i++) {
             const txtValue = li[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = '';
@@ -61,9 +61,9 @@ class NozakiTableFilter extends HTMLElement {
     }
 }
 
-customElements.define('nozaki-table-filter', NozakiTableFilter);
+customElements.define('nozaki-list-filter', NozakiListFilter);
 
 export {
-    NozakiTableFilter as default,
-    NozakiTableFilter
+    NozakiListFilter as default,
+    NozakiListFilter
 }
