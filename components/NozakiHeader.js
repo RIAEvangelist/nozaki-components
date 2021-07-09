@@ -10,7 +10,7 @@ const style=`
 function getTemplate(self){
     return `
         ${style}
-        <header class='w3-container w3-${self.dataset.color||'gray'} w3-cell-row ${self.dataset.class||''}'
+        <header class='w3-container w3-margin-bottom w3-${self.dataset.color||'gray'} w3-cell-row ${self.dataset.class||''}'
             style='padding:0; ${self.dataset.style||''}'
         >
             <div data-image-parent class='w3-container w3-cell ${self.dataset.imgclass||''}' style='${self.dataset.imgstyle||''}'>
