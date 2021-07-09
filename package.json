@@ -1,6 +1,6 @@
 {
   "name": "nozaki-components",
-  "version": "0.0.5",
+  "version": "0.1.5",
   "description": "modern vanilla components designed with ES6+ ESM first works in all modern browsers without transpiling.",
   "main": "index.js",
   "type":"module",
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "npm i && node ./test/CI.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "start-public": "screen node public.js"
   },
   "repository": {
     "type": "git",
