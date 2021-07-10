@@ -4,12 +4,12 @@ function getTemplate(self){
     return `
         ${style}
         
-        <aside class="w3-panel 
+        <aside class='w3-panel 
             w3-${self.dataset.color||'light-gray'} 
             w3-leftbar  
-            ${self.dataset.class||''}"
+            ${self.dataset.class||''}'
 
-            style="${self.dataset.style||''}"
+            style='${self.dataset.style||''}'
         >${self.innerHTML}</aside>
     `;
 }

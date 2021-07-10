@@ -6,8 +6,8 @@ function getTemplate(self){
     return `
         ${style}
         <button 
-            class="w3-button w3-ripple w3-${self.dataset.color || 'black'} ${self.dataset.class||''}"
-            style="${self.dataset.style||''}"
+            class='w3-button w3-ripple w3-${self.dataset.color || 'black'} ${self.dataset.class||''}'
+            style='${self.dataset.style||''}'
         >
             <slot name='text'></slot>
         </button>

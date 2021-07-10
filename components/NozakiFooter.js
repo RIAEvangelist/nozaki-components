@@ -15,7 +15,7 @@ function getTemplate(self){
         ${style}
         
         <footer 
-            class="w3-container w3-cell-row w3-${self.dataset.color||'gray'} ${self.dataset.class||''}"
+            class='w3-container w3-cell-row w3-${self.dataset.color||'gray'} ${self.dataset.class||''}'
             style='padding:1em 0; ${self.dataset.style||''}'    
         >${self.innerHTML}</footer>
     `;

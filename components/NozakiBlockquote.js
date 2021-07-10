@@ -5,13 +5,13 @@ function getTemplate(self){
         ${style}
         
         <blockquote 
-            class="w3-panel w3-leftbar 
+            class='w3-panel w3-leftbar 
                 w3-${self.dataset.color||'light-gray'} 
-                ${self.dataset.class||''}"
-            style="${self.dataset.style||''}"    
+                ${self.dataset.class||''}'
+            style='${self.dataset.style||''}'    
         >
-            <p class="w3-large">
-                <em>"${self.dataset.quote||''}"</em>
+            <p class='w3-large'>
+                <em>'${self.dataset.quote||''}'</em>
             </p>
             <p>${self.dataset.author||'Anonymous'}</p>
         </blockquote>

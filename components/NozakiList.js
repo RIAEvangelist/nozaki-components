@@ -3,8 +3,8 @@ const style=`<link rel="stylesheet" href="../css/w3.css">`;
 function getTemplate(self){
     return `
         ${style}
-        <ul class="w3-ul w3-hoverable ${self.dataset.class||''}"
-            style="${self.dataset.style||''}"
+        <ul class='w3-ul w3-hoverable ${self.dataset.class||''}'
+            style='${self.dataset.style||''}'
         >
             ${self.innerHTML}
         </ul>

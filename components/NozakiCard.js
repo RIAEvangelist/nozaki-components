@@ -4,8 +4,8 @@ function getTemplate(self){
     return `
         ${style}
         
-        <article class="w3-card w3-padding w3-cell ${self.dataset.class||''}"
-            style="${self.dataset.style||''}"
+        <article class='w3-card w3-padding w3-cell ${self.dataset.class||''}'
+            style='${self.dataset.style||''}'
         >${self.innerHTML}</article>
         
     `;
