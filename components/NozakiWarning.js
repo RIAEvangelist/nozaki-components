@@ -9,14 +9,15 @@ class NozakiWarning extends NozakiAlert {
         }
 
         if(!this.dataset.color){ 
-            this.shadowRoot.querySelector('div').classList.add('w3-pale-red');
-            this.shadowRoot.querySelector('div').classList.remove('w3-pale-yellow');
+            const root=this.shadowRoot.querySelector('div')
+            const button=this.shadowRoot.querySelector('nozaki-button')
+                .shadowRoot.querySelector('button')
 
-            this.shadowRoot.querySelector('nozaki-button').shadowRoot
-                .querySelector('button').classList.add('w3-pale-red');
-            
-            this.shadowRoot.querySelector('nozaki-button').shadowRoot
-                .querySelector('button').classList.remove('w3-pale-yellow');
+            root.classList.add('w3-pale-red');
+            root.classList.remove('w3-pale-yellow');
+
+            button.classList.add('w3-pale-red');
+            button.classList.remove('w3-pale-yellow');
         }
         
         return this;
