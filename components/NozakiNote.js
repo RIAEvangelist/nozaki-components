@@ -5,9 +5,8 @@ function getTemplate(self){
         ${style}
         
         <aside class="w3-panel 
-            w3-pale-${self.dataset.color||'gray'} 
-            w3-leftbar 
-            w3-border-${self.dataset.color||'gray'} 
+            w3-${self.dataset.color||'light-gray'} 
+            w3-leftbar  
             ${self.dataset.class||''}"
 
             style="${self.dataset.style||''}"
@@ -26,28 +25,6 @@ class NozakiNote extends HTMLElement {
 
         return this;
     }
-
-    static get observedAttributes() {
-        return [
-            
-        ];
-    }
-
-    async connectedCallback(){
-        
-        return this;
-    }
-
-    async disconnectedCallback(){
-
-        return this;
-    }
-
-    async attributeChangedCallback(name, oldVal, newVal){
-
-        return this;
-    }
-
 }
 
 customElements.define('nozaki-note', NozakiNote);

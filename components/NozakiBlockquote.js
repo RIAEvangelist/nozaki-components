@@ -5,7 +5,9 @@ function getTemplate(self){
         ${style}
         
         <blockquote 
-            class="w3-panel w3-leftbar w3-light-${self.dataset.color||'gray'} ${self.dataset.class||''}"
+            class="w3-panel w3-leftbar 
+                w3-${self.dataset.color||'light-gray'} 
+                ${self.dataset.class||''}"
             style="${self.dataset.style||''}"    
         >
             <p class="w3-large">
@@ -28,28 +30,6 @@ class NozakiBlockquote extends HTMLElement {
 
         return this;
     }
-
-    static get observedAttributes() {
-        return [
-            
-        ];
-    }
-
-    async connectedCallback(){
-        
-        return this;
-    }
-
-    async disconnectedCallback(){
-
-        return this;
-    }
-
-    async attributeChangedCallback(name, oldVal, newVal){
-
-        return this;
-    }
-
 }
 
 customElements.define('nozaki-blockquote', NozakiBlockquote);
