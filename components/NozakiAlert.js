@@ -21,7 +21,7 @@ function getTemplate(self){
                 data-color='${self.dataset.color||defaults.color}'
             ><span slot='text'>&times;</span></nozaki-button>
             
-            <h3>${self.dataset.title||'ALERT!'}</h3>
+            <h3 data-title>${self.dataset.title||'ALERT!'}</h3>
             ${self.innerHTML}
         </div>   
     `;
@@ -34,17 +34,11 @@ class NozakiAlert extends HTMLElement {
         //this.shadowRoot
         this.attachShadow({mode: 'open'});
         
-        this.shadowRoot.innerHTML=this.getTemplate(this);
-        this.bindEvents();
+        this.shadowRoot.innerHTML=getTemplate(this);
+        this.shadowRoot.querySelector('nozaki-button[data-close]').onclick=this.close;
         
 
         return this;
-    }
-
-    getTemplate=getTemplate;
-
-    bindEvents=()=>{
-        this.shadowRoot.querySelector('nozaki-button[data-close]').onclick=this.close;
     }
 
     close=(e)=>{

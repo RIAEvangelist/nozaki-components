@@ -4,20 +4,19 @@ class NozakiWarning extends NozakiAlert {
     constructor() {
         super();
         
-        let update=0;
-
-        if(!this.dataset.color){
-            this.dataset.color='pale-red';
-            update++;
-        }
         if(!this.dataset.title){
-            this.dataset.title='Warning!';
-            update++;
+            this.shadowRoot.querySelector('h3').innerHTML='Warning!';
         }
 
-        if(update){
-            this.shadowRoot.innerHTML= this.getTemplate(this);
-            this.bindEvents();
+        if(!this.dataset.color){ 
+            this.shadowRoot.querySelector('div').classList.add('w3-pale-red');
+            this.shadowRoot.querySelector('div').classList.remove('w3-pale-yellow');
+
+            this.shadowRoot.querySelector('nozaki-button').shadowRoot
+                .querySelector('button').classList.add('w3-pale-red');
+            
+            this.shadowRoot.querySelector('nozaki-button').shadowRoot
+                .querySelector('button').classList.remove('w3-pale-yellow');
         }
         
         return this;
