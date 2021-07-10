@@ -4,18 +4,20 @@ function getTemplate(self){
     return `
         ${style}
         
-        <aside class="w3-panel 
-            w3-pale-${self.dataset.color||'gray'} 
-            w3-leftbar 
-            w3-border-${self.dataset.color||'gray'} 
-            ${self.dataset.class||''}"
-
-            style="${self.dataset.style||''}"
-        >${self.innerHTML}</aside>
+        <blockquote 
+            class="w3-panel w3-leftbar w3-light-${self.dataset.color||'gray'} ${self.dataset.class||''}"
+            style="${self.dataset.style||''}"    
+        >
+            <p class="w3-large">
+                <em>"${self.dataset.quote||''}"</em>
+            </p>
+            <p>${self.dataset.author||'Anonymous'}</p>
+        </blockquote>
+        
     `;
 }
 
-class NozakiNote extends HTMLElement {
+class NozakiBlockquote extends HTMLElement {
     constructor() {
         super();
         
@@ -50,9 +52,9 @@ class NozakiNote extends HTMLElement {
 
 }
 
-customElements.define('nozaki-note', NozakiNote);
+customElements.define('nozaki-blockquote', NozakiBlockquote);
 
 export {
-    NozakiNote as default,
-    NozakiNote
+    NozakiBlockquote as default,
+    NozakiBlockquote
 }

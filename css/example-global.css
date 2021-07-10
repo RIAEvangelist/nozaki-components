@@ -11,3 +11,7 @@ html{
 body{
     background:#fff;
 }
+
+body.bottom{
+    padding-bottom:1em;
+}

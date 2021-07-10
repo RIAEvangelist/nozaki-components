@@ -21,7 +21,7 @@ function getTemplate(self){
             <nozaki-table
                 data-class='w3-padding ${self.dataset.tableclass||''}'
                 data-style='${self.dataset.tablestyle||''}'
-            >${self.querySelector('table').outerHTML}</nozakiTable>
+            >${self.querySelector('table').outerHTML||''}</nozakiTable>
         </div>
 
     `;

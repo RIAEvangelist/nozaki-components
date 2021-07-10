@@ -3,10 +3,10 @@ const style=`<link rel="stylesheet" href="../css/w3.css">`;
 function getTemplate(self){
     return `
         ${style}
-        <table class='w3-table-all w3-hoverable w3-card w3-margin-top ${self.dataset.class}'
+        <table class='w3-table-all w3-hoverable w3-card w3-margin-top ${self.dataset.class||''}'
             style='${self.dataset.style||''}'
         >
-            ${self.shadowRoot.host.querySelector('table').innerHTML}        
+            ${self.shadowRoot.host.querySelector('table').innerHTML||''}        
         </table>
     `;
 }
