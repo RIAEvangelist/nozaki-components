@@ -1,8 +1,16 @@
-import Is from 'strong-type';
 import Events from 'event-pubsub';
 
 const data={}
-
+const observableData=new Proxy(
+    data,
+    {
+        set(target, key, value, reciever){
+            Reflect.set(target, key, value, reciever)
+            console.log(key,value);
+            return target;
+        }
+    }
+)
 
 class NozakiState extends Events{
     constructor() {
@@ -11,7 +19,7 @@ class NozakiState extends Events{
         return this;
     }
 
-    data=data;
+    data=observableData;
 }
 
 export {
