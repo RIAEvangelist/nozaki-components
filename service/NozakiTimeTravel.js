@@ -13,6 +13,13 @@ class NozakiTimeTravel{
     start=Date.now()
     eventLog=[]
 
+    stop=()=>{
+        events.off(
+            '*',
+            this.add
+        );
+    }
+
     add=(type,data)=>{
         //log by offset
         this.eventLog.push(
