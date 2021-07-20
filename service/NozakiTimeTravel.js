@@ -1,17 +1,18 @@
 import events from './NozakiEvents.js'
 
-class NozakiTimeTravel{
+class NozakiTimeTravel extends Array{
     constructor(){
+        super();
+
         events.on(
             '*',
-            this.add
+            this.push
         );
 
         return this;
     }
 
     start=Date.now()
-    eventLog=[]
 
     stop=()=>{
         events.off(
@@ -19,24 +20,6 @@ class NozakiTimeTravel{
             this.add
         );
     }
-
-    add=(type,data)=>{
-        //log by offset
-        this.eventLog.push(
-            {
-                offset:(
-                    Date.now()-this.start
-                ),
-                event:{
-                    type,
-                    data
-                }
-            }
-        );
-
-        return this;
-    }
-
 }
 
 const timeTravel=new NozakiTimeTravel;
