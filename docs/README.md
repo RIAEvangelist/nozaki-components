@@ -1,4 +1,4 @@
-# Nozaki-Components documentation| 野崎コンポーネントのドキュメンテーション
+# Nozaki-Components documentation| 野崎ドキュメンテーション
 
 Please note all components are prefixed with `nozaki-` I just omit it below to save space and pixels. It's better for the environment and your eyes.
 
