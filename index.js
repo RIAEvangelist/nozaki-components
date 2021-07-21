@@ -1,4 +1,6 @@
 import express from 'express';
+import {color,background,style,resetAllColors} from 'nozaki-colors';
+
 const app = express();
 const port = 8888;
 
@@ -8,6 +10,6 @@ app.use(express.static('./'));
 app.listen(
     port, 
     () => console.log(
-        `http://localhost:${port}!`
+        `${background.black}${color.cyan}${style.underlineOn}http://localhost:${port}${resetAllColors}`
     )
 );

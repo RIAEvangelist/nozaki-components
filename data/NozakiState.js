@@ -1,4 +1,4 @@
-import Events from 'event-pubsub';
+import Events from '/libs/event-pubsub/index.js';
 
 const data={}
 const observableData=new Proxy(
