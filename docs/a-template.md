@@ -28,7 +28,8 @@ const x=new NozakiYYY;
 
 |dataset.|expects|description|
 |-|-|-|
-|||
+|class|class names|classnames seperated by spaces|these are appended to the actual components class attribute|
+|style|css styles|css inline styles|these are appended to the actual components style attribute|
 
 # Inner Html
 

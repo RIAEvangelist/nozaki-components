@@ -40,13 +40,13 @@ document.body.appendChild(header);
 
 |dataset.|expects|description|
 |-|-|-|
-|class|classnames seperated by spaces||
-|style|css inline styles||
-|text|main header text||
-|color|w3c css color name|used for the header background color|
-|img|path to image if you want one||
-|imgclass|classnames for just the image seperated by spaces||
-|imgstyle|css inline styles for just the image||
+|class|class names|classnames seperated by spaces|these are appended to the actual components class attribute|
+|style|css styles|css inline styles|these are appended to the actual components style attribute|
+|text|String|main header text|
+|color|[w3c color](https://www.w3schools.com/w3css/w3css_colors.asp)|appended like so `w3-${color}` used for the header background color|
+|img|path||
+|imgclass|class names|classnames for just the image seperated by spaces|
+|imgstyle|css styles|css inline styles for just the image|
 
 # Inner Html
 
