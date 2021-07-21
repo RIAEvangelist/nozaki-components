@@ -43,7 +43,7 @@ document.body.appendChild(header);
 |class|class names|classnames seperated by spaces|these are appended to the actual components class attribute|
 |style|css styles|css inline styles|these are appended to the actual components style attribute|
 |text|String|main header text|
-|color|[w3c color](https://www.w3schools.com/w3css/w3css_colors.asp)|appended like so `w3-${color}` used for the header background color|
+|color|[w3c color](https://www.w3schools.com/w3css/w3css_colors.asp)| Defaults to 'gray'. appended like so `w3-${color}` used for the header background color|
 |img|path||
 |imgclass|class names|classnames for just the image seperated by spaces|
 |imgstyle|css styles|css inline styles for just the image|
