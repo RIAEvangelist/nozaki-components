@@ -27,11 +27,7 @@ app.use(
 );
 
 //Setting up Cors
-app.use(
-    cors(
-        {origin: '*'}
-    )
-);
+app.use(cors());
 
 // Starting both http & https servers
 const httpServer = http.createServer(app);
