@@ -44,7 +44,7 @@ document.body.appendChild(header);
 |style|css styles|css inline styles|these are appended to the actual components style attribute|
 |text|String|main header text|
 |color|[w3c color](https://www.w3schools.com/w3css/w3css_colors.asp)| Defaults to 'gray'. appended like so `w3-${color}` used for the header background color|
-|img|path||
+|img|path| if no path is specified or an empty string, the image will not be placed in the header at all|
 |imgclass|class names|classnames for just the image seperated by spaces|
 |imgstyle|css styles|css inline styles for just the image|
 
