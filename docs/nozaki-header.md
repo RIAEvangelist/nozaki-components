@@ -28,6 +28,9 @@ with(header.dataset){
     text='Nozaki Components';
 }
 
+//this could be wherever
+document.body.appendChild(header);
+
 ```
 
 ### Both examples look like this
