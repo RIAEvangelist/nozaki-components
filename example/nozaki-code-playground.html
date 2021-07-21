@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>野崎 Nozaki Components Examples</title>
+        <script type='module'>
+            //import components used in the page
+            import '/components/NozakiCodePlayground.js';
+            import '/components/NozakiHeader.js';
+        </script>
+        <link rel="stylesheet" href="../css/example-global.css">
+    </head>
+
+    <body>
+        <nozaki-header
+            data-text='NozakiCodePlayground'
+        ></nozaki-header>
+    
+        <nozaki-code-playground 
+            data-class=''
+            data-style=''
+
+            data-color=''
+            data-textcolor=''
+            data-inputcolor=''
+
+            data-headertext=''
+        >
+<script type='module'>
+    //import components used in the page
+    import '/components/NozakiHeader.js';
+</script>
+
+<nozaki-header
+    data-text='Test Header'
+></nozaki-header>
+
+        </nozaki-code-playground>
+
+    </body>
+</html>
