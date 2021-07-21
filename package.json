@@ -39,6 +39,7 @@
     "vanilla-test": "^1.4.9"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "event-pubsub": "^5.0.3",
     "nozaki-colors": "^1.0.1",
     "strong-type": "^1.1.0"

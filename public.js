@@ -2,6 +2,7 @@ import express from 'express';
 import http from 'http';
 import https from 'https';
 import fs from 'fs';
+import cors from 'cors';
 
 const app = express();
 
@@ -18,7 +19,19 @@ const credentials = {
 
 
 // Setting up the public directory
-app.use(express.static('./',{ dotfiles: 'allow' }));
+app.use(
+    express.static(
+        './',
+        { dotfiles: 'allow' }
+    )
+);
+
+//Setting up Cors
+app.use(
+    cors(
+        {origin: '*'}
+    )
+);
 
 // Starting both http & https servers
 const httpServer = http.createServer(app);
