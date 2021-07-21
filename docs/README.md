@@ -6,7 +6,7 @@ Please note all components are prefixed with `nozaki-` I just omit it below to s
 
 |name|intended purpose|link|
 |-|-|-|
-|header |An app, page, or section header with an icon/logo/image.||
+|header |An app, page, or section header with an icon/logo/image.|[nozaki-header.md](/docs/nozaki-header.md)|
 |footer |A footer which allows any content to be used.||
 |card   |A card (article) which allows any content to be used.||
 |note	|A note/callout (aside) for some info. Any content can be used.||
