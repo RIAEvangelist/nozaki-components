@@ -17,6 +17,11 @@ const credentials = {
 	ca: ca
 };
 
+//Setting up Cors
+app.use(cors());
+
+
+
 
 // Setting up the public directory
 app.use(
@@ -25,9 +30,6 @@ app.use(
         { dotfiles: 'allow' }
     )
 );
-
-//Setting up Cors
-app.use(cors());
 
 // Starting both http & https servers
 const httpServer = http.createServer(app);
